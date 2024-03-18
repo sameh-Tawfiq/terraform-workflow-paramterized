@@ -26,7 +26,7 @@ resource "aws_subnet" "demosubnet1" {
   cidr_block             = var.subnet1_cidr
   map_public_ip_on_launch = true
   tags = {
-    Name = "Lab subnet 1"
+    Name = "Demo subnet 1"
   }
 }
 
@@ -36,6 +36,6 @@ resource "aws_subnet" "demosubnet2" {
   cidr_block             = var.subnet2_cidr
   map_public_ip_on_launch = true
   tags = {
-    Name = "Lab subnet 2"
+    Name = "Demo subnet 2"
   }
 }
