@@ -3,15 +3,15 @@ on:
   workflow_dispatch:
     inputs:
       environment:
-        description: 'Environment to deploy to'
+        description: 'Environment to deploy to Development or Production'
         required: true
-        default: 'development' # Default value, change as needed
+        default: '' # Default value, change as needed
   
 env:
   AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
   AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
 jobs:
-  build
+  buildt:
     name: build
     runs-on: ubuntu-latest
     environment: Development
@@ -32,4 +32,4 @@ jobs:
       
       - name: Terraform Apply
         run: terraform apply --auto-approve
-        
+      
